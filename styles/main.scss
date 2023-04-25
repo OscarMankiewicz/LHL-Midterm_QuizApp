@@ -20,10 +20,38 @@ body {
 header {
   display:flex;
   justify-content:space-between;
-  background-color: grey;
+  background-color: #E0E0E2;
   width:100%;
   position:fixed;
-  top:0
-
+  top:0;
+  padding-left:20px;
+  padding-right:20px;
 
 }
+
+.container {
+  color:white;
+  display:flex;
+  background-color:#07242E; //placeholder
+  width: 90%;
+  height:100vh;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top:40px;
+}
+
+.searchBar {
+  display:flex;
+  background-color: #E0E0E2; //placeholder
+  width: 60vh;
+  margin-top:60px;
+  justify-content: center;
+}
+
+#search-text {
+  width:60vh
+}
+
