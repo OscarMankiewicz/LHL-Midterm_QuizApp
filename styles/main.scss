@@ -49,9 +49,27 @@ header {
   width: 60vh;
   margin-top:60px;
   justify-content: center;
+  border-radius: 10px ; //some reason only hits bottom right corner
 }
 
 #search-text {
   width:60vh
+}
+
+.quizContainer {
+  background-color: #07242E;
+}
+
+.quiz{
+  display:flex;
+  background-color: white;
+  color:black;
+  border-radius: 10px;
+  padding-left:30px;
+  padding-right:30px;
+  width: 60vh;
+  flex-direction: column;
+  margin-top: 20px;
+  align-items: center;
 }
 
