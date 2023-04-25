@@ -16,3 +16,14 @@ body {
     rgba(163, 208, 219, 1) 100%
   );
 }
+
+header {
+  display:flex;
+  justify-content:space-between;
+  background-color: grey;
+  width:100%;
+  position:fixed;
+  top:0
+
+
+}
