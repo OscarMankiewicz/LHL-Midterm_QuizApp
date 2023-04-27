@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="/styles/layout.css" />
 
   <script src="/vendor/jquery-3.0.0.js"></script>
+  <script src="/routes/users.js"></script>
   <script defer src="/scripts/app.js"></script>
   <header>
     <H1>Site Name</H1>
@@ -23,12 +24,12 @@
 
 <body>
   <main class ="container">
-    <section class = "searchBar">
-      <form method ="POST" action ="/search" id="quizSearch">
-        <label for ="Search" id="searchButton"></label>
-        <textarea name ="text" id="search-text" placeholder="What quiz are you looking for?" ></textarea>
-        <div class =lowerHalf>
-          <button type = "submit" class ="SearchButton">Search</button>
+    <section class="searchBar">
+      <form method="get" action="/search" id="quizSearch">
+        <label for="search-text" id="searchButton">Search</label>
+        <textarea name="text" id="search-text" placeholder="What quiz are you looking for?"></textarea>
+        <div class="lowerHalf">
+          <button type="submit" class="searchButton">Search</button>
         </div>
       </form>
     </section>
@@ -56,6 +57,7 @@
 
     </section>
   <h1>Have fun! 🥔</h1>
+</main>
 </main>
 </body>
 
