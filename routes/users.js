@@ -10,6 +10,14 @@ const router  = express.Router();
 
 router.get('/', (req, res) => {
   res.render('users');
-}); 
+});
+
+router.get ('/search', (req, res) => { //cant get to work rn
+  res.redirect ('users')
+});
+
+router.post ('/search', (req,res) => {
+  res.redirect ('/users')
+});
 
 module.exports = router;
