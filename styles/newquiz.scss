@@ -1,0 +1,36 @@
+*{
+  box-sizing: border-box;
+}
+
+.title-maker-container{
+  display: flex;
+  margin-top: 7vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#title-maker {
+  width: 80%;
+  margin: 0 auto;
+}
+.QuestionBox {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: antiquewhite;
+  padding:20px;
+  padding-left: 8vh;
+  padding-right: 8vh;
+}
+
+.QuestionsContainer{
+  display: flex;
+  margin:2vh;
+  flex-direction: column;
+}
+
+.AddQuestion {
+  margin:20px;
+  background-color: antiquewhite;
+}
