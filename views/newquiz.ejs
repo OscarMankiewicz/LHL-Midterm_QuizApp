@@ -17,6 +17,7 @@
   <script src="/vendor/jquery-3.0.0.js"></script>
   <script src="/routes/users.js"></script>
   <script defer src="/scripts/app.js"></script>
+  <script defer src="/scripts/answerMaker.js"></script>
   <header>
     <H1>Site Name</H1>
     <button> Menu</button>
@@ -37,13 +38,13 @@
         <textarea name="text" class="questionTitle" placeholder="What's the Question?"></textarea>
       </div>
 
-      <div class ="QuestionsContainer">
-        <div class = "ManditoryQuestions">
-        <textarea name="text" class="questionTitle" placeholder="What's the Question?"></textarea>
-        <textarea name="text" class="questionTitle" placeholder="What's the Question?"></textarea>
+      <div class ="AnswersContainer">
+        <div class = "ManditoryAnswers">
+        <textarea name="text" id="Answer1" placeholder="Answer1"></textarea>
+        <textarea name="text" class="Answer2" placeholder="Answer2"></textarea>
       </div>
-      <div class="ExtraQuestions">
-        <button>Add a answer</button>
+      <div class="ExtraAnswers">
+        <button class="AddAnswer">Add a answer</button>
       </div>
     </div>
     </div>
