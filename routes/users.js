@@ -6,18 +6,12 @@
  */
 
 const express = require('express');
-const router  = express.Router();
+const app = express();
+// app.set("view engine", "ejs"); //this crashes app
 
-router.get('/', (req, res) => {
-  res.render('users');
-});
+app.get ('/newquiz', (req, res) => {
+  res.render('newquiz')
+})
 
-router.get ('/search', (req, res) => { //cant get to work rn
-  res.redirect ('users')
-});
+module.exports = app;
 
-router.post ('/search', (req,res) => {
-  res.redirect ('/users')
-});
-
-module.exports = router;
