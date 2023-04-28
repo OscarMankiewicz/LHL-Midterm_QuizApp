@@ -1,5 +1,6 @@
 DROP TABLE IF EXISTS answers CASCADE;
 CREATE TABLE answers (
   id SERIAL PRIMARY KEY NOT NULL,
-  content =
+  text VARCHAR(255) NOT NULL,
+  is_correct BOOLEAN NOT NULL
 );
