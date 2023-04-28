@@ -22,4 +22,4 @@ $(document).ready(function() {
 
 
 
-console.log ("debug check if answermaker works")
+console.log ("debug check if answermaker works");
