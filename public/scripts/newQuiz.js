@@ -1,25 +1,23 @@
 const addNewQuiz = document.querySelector('#title-maker');
 
-addNewQuiz.addEventListener('click', function(event) {
-  event.preventDefault();
-});
-
 $(document).ready(function() {
-  let counter = 2
-  $("#title-maker").on("click", function() {
-    counter++
-    var newAnswer = $("<textarea>").attr({
-      "placeholder": "Answer"+counter,
-      "id": "Answer"+counter
-    });
-    $(this).before(newAnswer);
+  $(".addAnswerButton").on("click", function(event) {
+    event.preventDefault();
 
-    if (counter >= 4) {
-      $(addAnswerButton).hide();
+    if ($("#title-maker").val().length === 0) {
+      $('.error-message').show();
+      $('.error-message').text("The Quiz Topic shouldn't be empty!");
+    } else {
+      $('.error-message').text("");
+      $('.error-message').hide();
+      $.post("/tweets",  $( this ).serialize(),   function(response, status)  {
+      // Clear text area
+      $("#tweet-maker").val("");
+      });
     }
   });
 });
 
 
 
-console.log ("debug check if answermaker works");
+console.log ("If quiz topic works");
