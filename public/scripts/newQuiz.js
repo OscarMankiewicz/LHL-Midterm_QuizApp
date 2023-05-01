@@ -12,7 +12,8 @@ $(document).ready(function() {
       $('.error-message').hide();
       $.post("/tweets",  $( this ).serialize(),   function(response, status)  {
       // Clear text area
-      $("#tweet-maker").val("");
+      $("#title-maker").val("");
+      $(this).before(addNewQuiz);
       });
     }
   });
