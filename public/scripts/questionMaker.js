@@ -45,7 +45,7 @@ $(document).ready(function() {
 
 
     $(".title-maker-container").append(questionBox);
-    if (questionCounter >= 10) {
+    if (questionCounter >= 5) {
       $(addQuestionButton).hide();
     }
 

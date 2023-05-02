@@ -3,5 +3,9 @@ CREATE TABLE questions (
   id SERIAL PRIMARY KEY NOT NULL,
   user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
   quiz_id INTEGER REFERENCES quiz(id) ON DELETE CASCADE,
-  text VARCHAR(255) NOT NULL
+  question1 VARCHAR(255) NOT NULL,
+  question2 VARCHAR(255) NOT NULL,
+  question3 VARCHAR(255),
+  question4 VARCHAR(255),
+  question5 VARCHAR(255)
 );
