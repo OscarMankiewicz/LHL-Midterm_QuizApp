@@ -12,23 +12,93 @@
 }
 
 #title-maker {
-  width: 80%;
-  margin: 0 auto;
+  width: 500px;
+  height: 50px;
+  border: 0px;
+  border-bottom: solid 3px;
+  border-color: #118AB2;
+  margin: 15% 10% 5% 0%;
 }
 .QuestionBox {
+  margin: 0% 5% 5% 0%;
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: antiquewhite;
-  padding:20px;
-  padding-left: 8vh;
+  padding-top: 2%;
+  padding-left: 0vh;
   padding-right: 8vh;
+}
+
+textarea {
+  padding: 2%;
+}
+
+.allAnswer {
+  display: flex;
+  width: 450px;
+  height: 50px;
+  margin: 2% 2% 2% 0%;
+}
+
+.answerTag {
+  height: 62%;
+  background-color: #2B4162;
+  color: #EEEEEE;
+  width: 20%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
+  padding: 1.5%;
+}
+
+
+
+.QuestionBox textarea {
+  background-color: F5F5F5;
+  border-radius: 5px;
+  width: 450px;
+  height: 50px;
+  margin: 2% 2% 2% 0%;
+}
+
+.QuestionBox input {
+
+  background-color: #EEEEEE;
+  border: 1px solid #2B4162  ;
+  height: 30px;
+  width: 80%;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-left: 100px;
+}
+.questionTitle {
+  width: 450px;
+}
+
+.ManditoryAnswers {
+  display: flex;
+  flex-direction: column;
+}
+
+.ExtraAnswers {
+  display: flex;
+  flex-direction: column;
 }
 
 .AnswersContainer{
   display: flex;
   margin:2vh;
   flex-direction: column;
+}
+
+.AddAnswer {
+  background-color: #118AB2;
+  border: 0px;
+  border-radius: 5px;
+  color: #EEEEEE;
+  width: 50%;
+  height: 50px;
+  margin-top: 10px;
 }
 
 .AddQuestion {
