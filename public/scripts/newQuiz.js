@@ -10,10 +10,10 @@ $(document).ready(function() {
     } else {
       $('.error-message').text("");
       $('.error-message').hide();
-      $.post("/tweets",  $( this ).serialize(),   function(response, status)  {
+      $.post("/tweets",  $(this).serialize(),   function(response, status)  {
       // Clear text area
-      $("#title-maker").val("");
-      $(this).before(addNewQuiz);
+        $("#title-maker").val("");
+        $(this).before(addNewQuiz);
       });
     }
   });
@@ -21,7 +21,7 @@ $(document).ready(function() {
 
 
 
-console.log ("If quiz topic works");
+console.log("If quiz topic works");
 
 
 //ill try and implement this later
