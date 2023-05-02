@@ -15,11 +15,11 @@
   width: 500px;
   height: 50px;
   border: 0px;
-  border-bottom: solid 3px;
-  border-color: #118AB2;
+  border-left: solid 3px #2B4162;
+  background-color: #EEEEEE;
   margin: 15% 10% 5% 0%;
   font-size: 25px;
-  color: #118AB2;
+  color: #2B4162;
 }
 .QuestionBox {
   margin: 0% 5% 5% 0%;
@@ -58,7 +58,7 @@ textarea {
 
 
 .QuestionBox textarea {
-  background-color: F5F5F5;
+  background-color: #F5F5F5;
   border-radius: 5px;
   width: 450px;
   height: 50px;
@@ -98,7 +98,7 @@ textarea {
 }
 
 .AddAnswer {
-  background-color: #118AB2;
+  background-color: #2B4162;
   border: 0px;
   border-radius: 5px;
   color: #EEEEEE;
@@ -127,7 +127,7 @@ hr {
 }
 
 #submit {
-  background-color: #FA8334;
+  background-color: #118AB2;
   border: 0px;
   border-radius: 5px;
   color: #EEEEEE;
