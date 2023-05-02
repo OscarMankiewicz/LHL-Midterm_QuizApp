@@ -49,6 +49,7 @@ textarea {
   border-bottom-left-radius: 5px;
   clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
   padding: 1.5%;
+  z-index: 1;
 }
 
 
@@ -69,6 +70,9 @@ textarea {
   width: 80%;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+  clip-path: polygon(5% 0%, 1000% 0%, 75% 100%, 0% 100%);
+  padding-left: 3%;
+  transition: border 0.5s ease-in-out 0s, box-shadow 0.3s ease-in-out 0s;
 }
 .questionTitle {
   width: 450px;
