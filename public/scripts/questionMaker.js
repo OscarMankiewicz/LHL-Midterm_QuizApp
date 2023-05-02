@@ -9,6 +9,7 @@ $(document).ready(function() {
   $(".AddQuestion").on("click", function() {
       questionCounter++;
       var questionBox = $("<div>").addClass("QuestionBox");
+      questionBox.attr("id", "Question" +questionCounter);
       var questionTitleContainer = $("<div>").addClass("Questiontitlecontainer");
       var questionTitleTextarea = $("<textarea>").addClass("questionTitle").attr("placeholder", "What's the Question?");
       questionTitleContainer.append(questionTitleTextarea);
