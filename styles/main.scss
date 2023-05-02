@@ -20,7 +20,7 @@ body {
 header {
   display:flex;
   justify-content:space-between;
-  background-color: #E0E0E2;
+  background-color: #F5F5F5;
   width:100%;
   position:fixed;
   top:0;
@@ -73,3 +73,25 @@ header {
   align-items: center;
 }
 
+nav {
+  display: flex;
+  color: #2B4162;
+  margin-right: 15px;
+  height: 100px;
+  white-space: nowrap;
+}
+
+nav a {
+ padding: 40px;
+ font-size: 20px;
+ font-family: Montserrat;
+ color: #2B4162;
+}
+
+a{
+text-decoration: none;
+}
+
+body a:hover{
+  color: #118AB2;
+}
