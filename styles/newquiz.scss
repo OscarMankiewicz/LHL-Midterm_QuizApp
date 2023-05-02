@@ -18,6 +18,8 @@
   border-bottom: solid 3px;
   border-color: #118AB2;
   margin: 15% 10% 5% 0%;
+  font-size: 25px;
+  color: #118AB2;
 }
 .QuestionBox {
   margin: 0% 5% 5% 0%;
@@ -32,6 +34,7 @@
 
 textarea {
   padding: 2%;
+  outline: none;
 }
 
 .allAnswer {
@@ -102,9 +105,36 @@ textarea {
   width: 50%;
   height: 50px;
   margin-top: 10px;
+  font-size: 19px;
 }
 
+hr {
+  width: 95%;
+  margin-left: -1%;
+  color: #3E3E3E;
+}
 .AddQuestion {
-  margin:20px;
-  background-color: antiquewhite;
+  background-color: #FFD116;
+  border: 0px;
+  border-radius: 5px;
+  color: #3E3E3E;
+  width: 42%;
+  height: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 19px;
+  margin-left: -58%;
+}
+
+#submit {
+  background-color: #FA8334;
+  border: 0px;
+  border-radius: 5px;
+  color: #EEEEEE;
+  width: 42%;
+  height: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 19px;
+  margin-left: -58%;
 }
