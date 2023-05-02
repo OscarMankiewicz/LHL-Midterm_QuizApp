@@ -5,17 +5,17 @@ addQuestionButton.addEventListener('click', function(event) {
 });
 
 $(document).ready(function() {
-  let counter =1;
+  let questionCounter =1;
   $(".AddQuestion").on("click", function() {
-      counter++;
+      questionCounter++;
       var questionBox = $("<div>").addClass("QuestionBox");
       var questionTitleContainer = $("<div>").addClass("Questiontitlecontainer");
       var questionTitleTextarea = $("<textarea>").addClass("questionTitle").attr("placeholder", "What's the Question?");
       questionTitleContainer.append(questionTitleTextarea);
 
       var manditoryAnswers = $("<div>").addClass("ManditoryAnswers");
-      var answer1Textarea = $("<textarea>").attr("name", "text").attr("placeholder", "Answer1").attr("id", "Answer1");
-      var answer2Textarea = $("<textarea>").attr("name", "text").addClass("Answer2").attr("placeholder", "Answer2");
+      var answer1Textarea = $("<textarea>").attr("name", "text").attr("placeholder", "Answer " + questionCounter + "-1").attr("id", "Answer1");
+      var answer2Textarea = $("<textarea>").attr("name", "text").addClass("Answer2").attr("placeholder", "Answer " + questionCounter + "-1");
       manditoryAnswers.append(answer1Textarea).append(answer2Textarea);
 
       var extraAnswers = $("<div>").addClass("ExtraAnswers");
@@ -27,16 +27,16 @@ $(document).ready(function() {
       questionBox.append(answersContainer);
 
       $(document).ready(function() {
-        let counter = 2
+        let answerCounter = 2
         $(".AddAnswer").on("click", function() {
-          counter++
+          answerCounter++
           var newAnswer = $("<textarea>").attr({
-            "placeholder": "Answer"+counter,
-            "id": "Answer"+counter
+            "placeholder": "Answer "+ questionCounter + "-" + answerCounter,
+            "id": "Answer "+ questionCounter + "-" + answerCounter
           });
           $(this).before(newAnswer);
 
-          if (counter >= 4) {
+          if (answerCounter >= 4) {
             $(addAnswerButton).hide();
           }
         });
@@ -44,7 +44,7 @@ $(document).ready(function() {
 
 
       $(".title-maker-container").append(questionBox);
-    if (counter >= 10) {
+    if (questionCounter >= 10) {
       $(addQuestionButton).hide();
     }
 
@@ -58,3 +58,5 @@ $(document).ready(function() {
 
 
 console.log ("debug check if questionmaker works")
+
+
