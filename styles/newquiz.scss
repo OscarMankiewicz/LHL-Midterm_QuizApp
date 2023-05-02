@@ -41,7 +41,7 @@ textarea {
 }
 
 .answerTag {
-  height: 62%;
+  height: 60%;
   background-color: #2B4162;
   color: #EEEEEE;
   width: 20%;
@@ -62,14 +62,13 @@ textarea {
 }
 
 .QuestionBox input {
-
+  outline: none;
   background-color: #EEEEEE;
-  border: 1px solid #2B4162  ;
+  border: 0px solid #2B4162  ;
   height: 30px;
   width: 80%;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
-  border-left: 100px;
 }
 .questionTitle {
   width: 450px;
