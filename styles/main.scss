@@ -3,7 +3,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  // min-height: 100vh;
+  height:100%;
 
   background: rgb(163, 208, 219);
   background: linear-gradient(
@@ -34,7 +35,7 @@ header {
   display:flex;
   background-color:#ffffff; //placeholder
   width: 90%;
-  height:100vh;
+  height:100%;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
