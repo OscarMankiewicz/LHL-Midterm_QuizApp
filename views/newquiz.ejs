@@ -20,54 +20,69 @@
   <script defer src="/scripts/questionMaker.js"></script>
   <script defer src="/scripts/answerMaker.js"></script>
 
+
   <%- include('./partials/header') %>
 </head>
 
 <body>
   <main class ="container">
 
+
     <section class="title-maker-container">
       <form method="post" action="/quiz" class="title-maker">
         <div class = title>
-        <textarea name="text" id="title-maker" placeholder="Title of the quiz goes here"></textarea>
-      </div>
-
-      <div id =Question1>
-      <div class="QuestionBox">
-        <div class="Questiontitlecontainer">
-        <textarea name="text" class="questionTitle" placeholder="What's the Question?"></textarea>
-      </div>
-
-      <div class ="AnswersContainer">
-        <div class = "ManditoryAnswers">
-        <div class="allAnswer">
-          <div class="answerTag"> A </div>
-        <input name="text" id="Answer 1-1" class="answer" placeholder="Answer 1">
-        </div>
-        <div class="allAnswer">
-          <div class="answerTag"> B </div>
-        <input name="text" id="Answer 1-2" class="answer" placeholder="Answer 2">
+          <textarea name="text" id="title-maker" placeholder="What's the topic?"></textarea>
         </div>
 
-      </div>
-      <div class="ExtraAnswers">
-        <button class="AddAnswer">+ Add An Answer</button>
-      </div>
-    </div>
-    </div>
-    </div>
+        <div id =Question1>
+          <div class="QuestionBox">
+            <div class="Questiontitlecontainer">
+              <textarea name="text" class="questionTitle" placeholder="What's the Question?">
+              </textarea>
+            </div>
 
-    <hr>
+            <div class ="AnswersContainer">
+              <div class = "ManditoryAnswers">
+                <div class="allAnswer">
+                  <div id="answerTagA" class="answerTag"> A </div>
+                  <input name="text" id="Answer1-1" class="answer" placeholder="Answer 1">
+                  <input type="checkbox" id="checkA" class="check">
+                </div>
+                <div class="allAnswer">
+                  <div id="answerTagB" class="answerTag"> B </div>
+                  <input name="text" id="Answer1-2" class="answer" placeholder="Answer 2">
+                  <input type="checkbox" id="checkB" class="check">
+                </div>
+                <div id="extra3" class="allAnswer">
+                  <div id="answerTagC" class="answerTag"> C </div>
+                  <input name="text" id="Answer1-3" class="answer" placeholder="Answer 3" >
+                  <input type="checkbox" id="checkC" class="check">
+                </div>
+                <div id="extra4" class="allAnswer extra">
+                  <div id="answerTagD" class="answerTag"> D </div>
+                  <input name="text" id="Answer1-4" class="answer" placeholder="Answer 4">
+                  <input type="checkbox" id="checkD" class="check">
+                </div>
+              </div>
+              <div class="ExtraAnswers">
+                <button class="AddAnswer">+ Add An Answer</button>
+              </div>
+            </div>
+          </div>
+        </div>
 
-      <div>
-        <button class ="AddQuestion">+ Add A Question</button>
-      </div>
+        <hr>
 
-    <hr>
+        <div>
+          <button class ="AddQuestion">+ Add A Question</button>
+        </div>
+
+        <hr>
+
         <div class="Createbutton">
           <button type="submit" id="submit" class="Createbutton">Create A Quiz</button>
         </div>
-      </form>
+        </form>
     </section>
 
 
@@ -76,5 +91,4 @@
 </main>
 </main>
 </body>
-
 </html>

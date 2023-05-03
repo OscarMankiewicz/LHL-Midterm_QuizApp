@@ -15,13 +15,13 @@ $(document).ready(function() {
     questionTitleContainer.append(questionTitleTextarea);
 
     let manditoryAnswers = $("<div>").addClass("ManditoryAnswers");
-    let answer1Textarea = $("<textarea>").attr("name", "text").attr("placeholder", "Answer " + questionCounter + "-1").attr("id", "Answer1");
-    let answer2Textarea = $("<textarea>").attr("name", "text").addClass("Answer2").attr("placeholder", "Answer " + questionCounter + "-1");
-    manditoryAnswers.append(answer1Textarea).append(answer2Textarea);
+    //let answer1Textarea = $("<textarea>").attr("name", "text").attr("placeholder", "Answer " + questionCounter + "-1").attr("id", "Answer1");
+    //let answer2Textarea = $("<textarea>").attr("name", "text").addClass("Answer2").attr("placeholder", "Answer " + questionCounter + "-1");
+    //manditoryAnswers.append(answer1Textarea).append(answer2Textarea);
 
-    let extraAnswers = $("<div>").addClass("ExtraAnswers");
-    let addAnswerButton = $("<button>").addClass("AddAnswer").text("Add a answer");
-    extraAnswers.append(addAnswerButton);
+    //let extraAnswers = $("<div>").addClass("ExtraAnswers");
+    //let addAnswerButton = $("<button>").addClass("AddAnswer").text("Add a answer");
+    //extraAnswers.append(addAnswerButton);
 
     let answersContainer = $("<div>").addClass("AnswersContainer");
     answersContainer.append(questionTitleContainer).append(manditoryAnswers).append(extraAnswers);
@@ -31,10 +31,11 @@ $(document).ready(function() {
       let answerCounter = 2;
       $(".AddAnswer").on("click", function() {
         answerCounter++;
-        let newAnswer = $("<textarea>").attr({
-          "placeholder": "Answer " + questionCounter + "-" + answerCounter,
-          "id": "Answer " + questionCounter + "-" + answerCounter
-        });
+        if (answerCounter === 3) {
+          document.getElementByClass("extra3").style.color = "flex";
+        } else if (answerCounter === 4) {
+          document.getElementById("extra4").style.display = "flex";
+        }
         $(this).before(newAnswer);
 
         if (answerCounter >= 4) {
