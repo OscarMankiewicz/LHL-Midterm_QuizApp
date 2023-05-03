@@ -5,5 +5,5 @@ CREATE TABLE answers (
   answer2 VARCHAR(255) NOT NULL,
   answer3 VARCHAR(255) NOT NULL,
   answer4 VARCHAR(255) NOT NULL,
-  is_correct BOOLEAN NOT NULL
+  is_correct TEXT NOT NULL
 );
