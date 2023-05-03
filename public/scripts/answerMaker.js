@@ -63,7 +63,7 @@ $(document).ready(function() {
   let checkSignC = 0;
   $("#checkC").on("click", function() {
     document.getElementById("checkA").checked = false;
-    document.getElementById("checkC").checked = false;
+    document.getElementById("checkB").checked = false;
     document.getElementById("checkD").checked = false;
     checkSignC++;
     if (checkSignC % 2 !== 0) {
@@ -90,8 +90,8 @@ $(document).ready(function() {
   let checkSignD = 0;
   $("#checkD").on("click", function() {
     document.getElementById("checkA").checked = false;
+    document.getElementById("checkB").checked = false;
     document.getElementById("checkC").checked = false;
-    document.getElementById("checkD").checked = false;
     checkSignD++;
     if (checkSignD % 2 !== 0) {
     document.getElementById("answerTagA").style.backgroundColor = "#FA8334";
