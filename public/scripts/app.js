@@ -10,3 +10,5 @@ function generateUrl() {
   }
   return quizUrl;
 }
+
+module.exports(generateUrl);
