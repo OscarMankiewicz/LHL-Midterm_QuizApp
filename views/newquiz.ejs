@@ -8,8 +8,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
 
-    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" />
-    <link rel="stylesheet" href="/vendor/border-box.css" />
+    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" /> -->
+    <link rel="stylesheet" href="/vendor/border-box.css" /> -->
     <link rel="stylesheet" href="/styles/main.css" />
     <link rel="stylesheet" href="/styles/layout.css" />
     <link rel="stylesheet" href="/styles/newquiz.css" />
@@ -26,19 +26,26 @@
 
   <body>
     <main class ="container">
+      <h1> Creat Quiz </h1>
+
+      <hr id="titleLine">
+
+      <h3> You can add up to 5 questions </h3>
 
       <section class="title-maker-container">
-        <form method="post" action="/quiz" class="title-maker">
+        <form id="QuizForm" method="post" action="/quiz" class="title-maker">
           <div class = title>
-            <textarea name="text" id="title-maker" placeholder="What's the topic?">
-            </textarea>
+
+            <textarea name="text" id="title-maker" placeholder="What's the topic?"></textarea>
           </div>
 
           <div id =Question1>
+
+            <h4 id="questionOrder"> Your First Question </h4>
+
             <div class="QuestionBox">
               <div class="Questiontitlecontainer">
-                <textarea name="text" class="questionTitle" placeholder="What's the Question?">
-                </textarea>
+                <textarea name="text" class="questionTitle" placeholder="What's your question?"></textarea>
               </div>
               <div class ="AnswersContainer">
                 <div class = "ManditoryAnswers">
@@ -72,21 +79,21 @@
 
           <hr>
 
+          <div id =Question2>
+
+          </div>
+
           <div>
-            <button class ="AddQuestion">+ Add A Question</button>
+            <button class ="AddQuestion">+ Add New Question</button>
           </div>
 
           <hr>
 
           <div class="Createbutton">
-            <button type="submit" id="submit" class="Createbutton">Create A Quiz</button>
+            <button type="submit" id="submit" class="Createbutton">Create New Quiz</button>
           </div>
         </form>
     </section>
-
-
-
-
     </main>
   </body>
 </html>

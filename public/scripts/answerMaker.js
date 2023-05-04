@@ -1,18 +1,15 @@
 const addAnswerButton = document.querySelector('.AddAnswer');
 //this is just effects the initial first question in the new quiz page
-
 addAnswerButton.addEventListener('click', function(event) {
   event.preventDefault();
 });
 
 $(document).ready(function() {
-  let checkSignA = 0;
   $("#checkA").on("click", function() {
     document.getElementById("checkB").checked = false;
     document.getElementById("checkC").checked = false;
     document.getElementById("checkD").checked = false;
-    checkSignA++;
-    if (checkSignA % 2 !== 0) {
+    if (document.getElementById("checkA").checked) {
     document.getElementById("answerTagA").style.backgroundColor = "#118AB2";
     document.getElementById("Answer1-1").style.borderColor = "#118AB2";
     document.getElementById("answerTagB").style.backgroundColor = "#FA8334";
@@ -21,7 +18,7 @@ $(document).ready(function() {
     document.getElementById("Answer1-3").style.borderColor = "#FA8334";
     document.getElementById("answerTagD").style.backgroundColor = "#FA8334";
     document.getElementById("Answer1-4").style.borderColor = "#FA8334";
-  } else {
+  } else if (!document.getElementById("checkA").checked && !document.getElementById("checkB").checked && !document.getElementById("checkC").checked && !document.getElementById("checkD").checked) {
     document.getElementById("answerTagA").style.backgroundColor = "#2B4162";
     document.getElementById("Answer1-1").style.borderColor = "#2B4162";
     document.getElementById("answerTagB").style.backgroundColor = "#2B4162";
@@ -33,13 +30,11 @@ $(document).ready(function() {
   }
   });
 
-  let checkSignB = 0;
   $("#checkB").on("click", function() {
     document.getElementById("checkA").checked = false;
     document.getElementById("checkC").checked = false;
     document.getElementById("checkD").checked = false;
-    checkSignB++;
-    if (checkSignB % 2 !== 0) {
+    if (document.getElementById("checkB").checked) {
     document.getElementById("answerTagA").style.backgroundColor = "#FA8334";
     document.getElementById("Answer1-1").style.borderColor = "#FA8334";
     document.getElementById("answerTagB").style.backgroundColor = "#118AB2";
@@ -48,7 +43,7 @@ $(document).ready(function() {
     document.getElementById("Answer1-3").style.borderColor = "#FA8334";
     document.getElementById("answerTagD").style.backgroundColor = "#FA8334";
     document.getElementById("Answer1-4").style.borderColor = "#FA8334";
-  } else {
+  }  else if (!document.getElementById("checkA").checked && !document.getElementById("checkB").checked && !document.getElementById("checkC").checked && !document.getElementById("checkD").checked) {
     document.getElementById("answerTagA").style.backgroundColor = "#2B4162";
     document.getElementById("Answer1-1").style.borderColor = "#2B4162";
     document.getElementById("answerTagB").style.backgroundColor = "#2B4162";
@@ -60,13 +55,11 @@ $(document).ready(function() {
   }
   });
 
-  let checkSignC = 0;
   $("#checkC").on("click", function() {
     document.getElementById("checkA").checked = false;
     document.getElementById("checkB").checked = false;
     document.getElementById("checkD").checked = false;
-    checkSignC++;
-    if (checkSignC % 2 !== 0) {
+    if (document.getElementById("checkC").checked) {
     document.getElementById("answerTagA").style.backgroundColor = "#FA8334";
     document.getElementById("Answer1-1").style.borderColor = "#FA8334";
     document.getElementById("answerTagB").style.backgroundColor = "#FA8334";
@@ -75,7 +68,7 @@ $(document).ready(function() {
     document.getElementById("Answer1-3").style.borderColor = "#118AB2";
     document.getElementById("answerTagD").style.backgroundColor = "#FA8334";
     document.getElementById("Answer1-4").style.borderColor = "#FA8334";
-  } else {
+  }  else if (!document.getElementById("checkA").checked && !document.getElementById("checkB").checked && !document.getElementById("checkC").checked && !document.getElementById("checkD").checked) {
     document.getElementById("answerTagA").style.backgroundColor = "#2B4162";
     document.getElementById("Answer1-1").style.borderColor = "#2B4162";
     document.getElementById("answerTagB").style.backgroundColor = "#2B4162";
@@ -87,13 +80,11 @@ $(document).ready(function() {
   }
 });
 
-  let checkSignD = 0;
   $("#checkD").on("click", function() {
     document.getElementById("checkA").checked = false;
     document.getElementById("checkB").checked = false;
     document.getElementById("checkC").checked = false;
-    checkSignD++;
-    if (checkSignD % 2 !== 0) {
+    if (document.getElementById("checkD").checked) {
     document.getElementById("answerTagA").style.backgroundColor = "#FA8334";
     document.getElementById("Answer1-1").style.borderColor = "#FA8334";
     document.getElementById("answerTagB").style.backgroundColor = "#FA8334";
@@ -102,7 +93,7 @@ $(document).ready(function() {
     document.getElementById("Answer1-3").style.borderColor = "#FA8334";
     document.getElementById("answerTagD").style.backgroundColor = "#118AB2";
     document.getElementById("Answer1-4").style.borderColor = "#118AB2";
-  } else {
+  }  else if (!document.getElementById("checkA").checked && !document.getElementById("checkB").checked && !document.getElementById("checkC").checked && !document.getElementById("checkD").checked) {
     document.getElementById("answerTagA").style.backgroundColor = "#2B4162";
     document.getElementById("Answer1-1").style.borderColor = "#2B4162";
     document.getElementById("answerTagB").style.backgroundColor = "#2B4162";
