@@ -19,7 +19,7 @@
     <script defer src="/scripts/app.js"></script>
     <script defer src="/scripts/questionMaker.js"></script>
     <script defer src="/scripts/answerMaker.js"></script>
-
+    <script defer src="/scripts/newQuiz.js"></script>
 
     <%- include('./partials/header') %>
   </head>
@@ -43,11 +43,11 @@
 
             <h4 id="questionOrder"> Your First Question </h4>
 
-            <div class="QuestionBox">
+            <div id="question-box" class="QuestionBox">
               <div class="Questiontitlecontainer">
                 <textarea name="text" class="questionTitle" placeholder="What's your question?"></textarea>
               </div>
-              <div class ="AnswersContainer">
+              <div id="answer-container" class ="AnswersContainer">
                 <div class = "ManditoryAnswers">
                   <div class="allAnswer">
                     <div id="answerTagA" class="answerTag"> A </div>
@@ -90,7 +90,7 @@
           <hr>
 
           <div class="Createbutton">
-            <button type="submit" id="submit" class="Createbutton">Create New Quiz</button>
+            <button id="submit" class="Createbutton">Create New Question</button>
           </div>
         </form>
     </section>
