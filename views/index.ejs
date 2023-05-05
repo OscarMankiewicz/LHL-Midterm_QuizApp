@@ -15,7 +15,8 @@
   <link rel="stylesheet" href="/styles/index.css" />
 
   <script src="/vendor/jquery-3.0.0.js"></script>
-  <script src="/routes/users.js"></script>
+  <!-- <script src="/routes/users.js"></script> -->
+  <script src="/scripts/quizPopup.js"></script>
   <script defer src="/scripts/app.js"></script>
   <script defer src="/scripts/newQuiz.js"></script>
 
@@ -49,18 +50,17 @@
 
     <hr class="titleLine">
 
+    <div id="QuestionBox"></div>
 
     <section class="title-maker-container">
       <form id="QuizLayout" method="post" action="/quiz" class="title-maker">
         <div class = title>
 
+
           <div name="topic" id="title-topic"> Geography </div>
         </div>
 
         <div id =Question1>
-
-          <!-- <h4 id="questionOrder"> Your First Question </h4> -->
-
           <div id="question-box" class="QuestionBox">
             <div class="Questiontitlecontainer">
               <div id="question-content" name="text" class="questionTitle"> Where is the Trevi Fountain located ? </div>

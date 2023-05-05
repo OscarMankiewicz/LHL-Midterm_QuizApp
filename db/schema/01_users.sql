@@ -16,7 +16,7 @@ CREATE TABLE users (
 
 
 
--- Used to reset whole table and serial ids
+Used to reset whole table and serial ids
 -- DROP TABLE IF EXISTS users CASCADE;
 -- CREATE TABLE users (
 --   id SERIAL PRIMARY KEY NOT NULL,
@@ -28,6 +28,7 @@ CREATE TABLE users (
 -- CREATE TABLE quiz (
 --   id SERIAL PRIMARY KEY NOT NULL,
 --   user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+--   quiz_url VARCHAR(255);
 --   name VARCHAR(255) NOT NULL,
 --   title VARCHAR(255) NOT NULL,
 --   question1 VARCHAR(255) NOT NULL,

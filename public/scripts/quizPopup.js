@@ -1,16 +1,24 @@
-
-
+$(document).ready(function() {
 const quizPopup = {
-  "content": {
-    "text": "Name of the Quiz"
-  }
+  "quizzes": [
+    {
+      "content": {
+        "text": "Name of the Quiz"
+      }
+    },
+    {
+      "content": {
+        "text": "Name of the Quiz 2"
+      }
+    }
+  ]
 };
 
-const renderQuiz = function(quizs) {
+const renderQuiz = function(quizzes) {
   const $QuestionBox = $('#QuestionBox');
   $QuestionBox.empty();
 
-  for (const quiz of quizs) {
+  for (const quiz of quizzes) {
     const $quizElement = createQuizElement(quiz);
     $QuestionBox.append($quizElement);
   }
@@ -23,3 +31,8 @@ const createQuizElement = function(quiz) {
   $quiz.append($content);
   return $quiz;
 }
+
+renderQuiz(quizPopup.quizzes);
+
+console.log ('quizpopup is working')
+})
