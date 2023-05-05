@@ -4,53 +4,82 @@ addQuestionButton.addEventListener('click', function(event) {
   event.preventDefault();
 });
 
+let questionCounter = 1;
+
+const newQuestion = (questionNumber) => {
+  return `
+    <div class="Questiontitlecontainer">
+      <textarea name="text" class="questionTitle" placeholder="What's your question?"></textarea>
+    </div>
+    <div id="answer-container" class ="AnswersContainer">
+      <div class = "ManditoryAnswers">
+        <div class="allAnswer">
+          <div id="answerTagA" class="answerTag"> A </div>
+          <input name="text" id="Answer${questionNumber}-1" class="answer" placeholder="Answer 1">
+          <input type="checkbox" id="checkA" class="check">
+          </div>
+        <div class="allAnswer">
+          <div id="answerTagB" class="answerTag"> B </div>
+          <input name="text" id="Answer${questionNumber}-2" class="answer" placeholder="Answer 2">
+          <input type="checkbox" id="checkB" class="check">
+        </div>
+        <div id="extra3" class="allAnswer">
+          <div id="answerTagC" class="answerTag"> C </div>
+          <input name="text" id="Answer${questionNumber}-3" class="answer" placeholder="Answer 3" >
+          <input type="checkbox" id="checkC" class="check">
+        </div>
+        <div id="extra4" class="allAnswer extra">
+          <div id="answerTagD" class="answerTag"> D </div>
+          <input name="text" id="Answer${questionNumber}-4" class="answer" placeholder="Answer 4">
+          <input type="checkbox" id="checkD" class="check">
+        </div>
+      </div>
+      <div class="ExtraAnswers">
+        <button class="AddAnswer">+ Add An Answer</button>
+      </div>
+    </div>
+`
+}
+
+const Quizform = document.getElementById("quizForm");
 $(document).ready(function() {
-  let questionCounter = 1;
   $(".AddQuestion").on("click", function() {
     questionCounter++;
-    let questionBox = $("<div>").addClass("QuestionBox");
-    questionBox.attr("id", "Question" + questionCounter);
-    let questionTitleContainer = $("<div>").addClass("Questiontitlecontainer");
-    let questionTitleTextarea = $("<textarea>").addClass("questionTitle").attr("placeholder", "What's the Question?");
-    questionTitleContainer.append(questionTitleTextarea);
-
-    let manditoryAnswers = $("<div>").addClass("ManditoryAnswers");
-    //let answer1Textarea = $("<textarea>").attr("name", "text").attr("placeholder", "Answer " + questionCounter + "-1").attr("id", "Answer1");
-    //let answer2Textarea = $("<textarea>").attr("name", "text").addClass("Answer2").attr("placeholder", "Answer " + questionCounter + "-1");
-    //manditoryAnswers.append(answer1Textarea).append(answer2Textarea);
-
-    //let extraAnswers = $("<div>").addClass("ExtraAnswers");
-    //let addAnswerButton = $("<button>").addClass("AddAnswer").text("Add a answer");
-    //extraAnswers.append(addAnswerButton);
-
-    let answersContainer = $("<div>").addClass("AnswersContainer");
-    answersContainer.append(questionTitleContainer).append(manditoryAnswers).append(extraAnswers);
-    questionBox.append(answersContainer);
-
-    $(document).ready(function() {
-      let answerCounter = 2;
-      $(".AddAnswer").on("click", function() {
-        answerCounter++;
-        if (answerCounter === 3) {
-          document.getElementByClass("extra3").style.color = "flex";
-        } else if (answerCounter === 4) {
-          document.getElementById("extra4").style.display = "flex";
-        }
-        $(this).before(newAnswer);
-
-        if (answerCounter >= 4) {
-          $(addAnswerButton).hide();
-        }
-      });
-    });
-
-
-    $(".title-maker-container").append(questionBox);
-    if (questionCounter >= 5) {
-      $(addQuestionButton).hide();
+    if (questionCounter < 6) {
+      if (questionCounter === 2) {
+        $("#questionOrder").text("Your Second Question");
+        document.getElementById("questionOrder").style.marginLeft = "-51%";
+        const anQuestion = newQuestion(questionCounter);
+        $("#question-box").empty();
+        $("#question-box").append(anQuestion);
+        //document.getElementById("question-box").style.width = "105%";
+      } else if (questionCounter === 3) {
+        $("#questionOrder").text("Your Third Question");
+        document.getElementById("questionOrder").style.marginLeft = "-56%";
+        const anQuestion = newQuestion(questionCounter);
+        $("#question-box").empty();
+        $("#question-box").append(anQuestion);
+      } else if (questionCounter === 4) {
+        $("#questionOrder").text("Your Fourth Question");
+        document.getElementById("questionOrder").style.marginLeft = "-52.5%";
+        const anQuestion = newQuestion(questionCounter);
+        $("#question-box").empty();
+        $("#question-box").append(anQuestion);
+      } else if (questionCounter === 5) {
+        $("#questionOrder").text("Your Fifth Question");
+        document.getElementById("questionOrder").style.marginLeft = "-57%";
+        const anQuestion = newQuestion(questionCounter);
+        $("#question-box").empty();
+        $("#question-box").append(anQuestion);
+      }
+      //Quizform.submit();
+    }
+    if (questionCounter === 5) {
+      $(".AddQuestion").text("Submit Last Question");
     }
 
   });
+
 });
 
 
@@ -60,5 +89,3 @@ $(document).ready(function() {
 
 
 console.log("debug check if questionmaker works");
-
-

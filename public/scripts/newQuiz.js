@@ -1,8 +1,4 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const mysql = require('mysql');
-const generateUrl = require('./app.js').generateUrl;
-const addNewQuiz = document.querySelector('#title-maker');
+const addNewQuiz = document.querySelector('#submit');
 
 const app = express();
 
@@ -46,21 +42,10 @@ app.post('/quiz', (req, res) => {
 
 
 $(document).ready(function() {
-  $(".addAnswerButton").on("click", function(event) {
+  $("#submit").on("click", function(event) {
     event.preventDefault();
-
-    if ($("#title-maker").val().length === 0) {
-      $('.error-message').show();
-      $('.error-message').text("The Quiz Topic shouldn't be empty!");
-    } else {
-      $('.error-message').text("");
-      $('.error-message').hide();
-      $.post("/quiz",  $(this).serialize(),   function(response, status)  {
-      // Clear text area
-        $("#title-maker").val("");
-        $(this).before(addNewQuiz);
-      });
-    }
+    console.log("submitting");
+    location.reload();
   });
 });
 
@@ -87,7 +72,7 @@ function generateUrl() {
 
 
 //ill try and implement this later
-const addProperty = function(property) {
+/*const addProperty = function(property) {
   const query = {
     text: 'INSERT INTO Quiz (UsersID, Questions=1) VALUES ($1, $2,) RETURNING *',
     values: [
@@ -104,4 +89,4 @@ const addProperty = function(property) {
       console.log(err.message);
       throw err;
     });
-};
+};*/

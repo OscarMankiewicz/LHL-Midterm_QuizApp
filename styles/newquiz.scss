@@ -5,14 +5,37 @@
 .title-maker-container{
   display: flex;
   margin-top: 7vh;
-  justify-content: center;
   align-items: center;
   text-align: center;
   flex-direction: column
 }
 
+h1 {
+  font-size: 50px;
+  margin-top: 10%;
+  margin-bottom: 0%;
+  color: #118AB2;
+}
+
+h3 {
+  font-size: 25px;
+  margin-top: 2%;
+  margin-bottom: 0%;
+  color: #3E3E3E;
+}
+
+h4 {
+  font-size: 25px;
+  margin-top: 2%;
+  margin-bottom: 0%;
+  margin-left: -57%;
+  text-decoration: underline;
+  color: #2B4162;
+}
+
 #title-maker {
-  width: 500px;
+  outline: none;
+  width: 550px;
   height: 50px;
   border: 0px;
   border-left: solid 3px #2B4162;
@@ -20,9 +43,10 @@
   margin: 15% 10% 5% 0%;
   font-size: 25px;
   color: #2B4162;
+  clip-path: polygon(0% 0%, 95% 0%, 75% 100%, 0% 100%);
 }
 .QuestionBox {
-  margin: 0% 5% 5% 0%;
+  margin: 0% 5% 5% 0.5%;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -34,14 +58,13 @@
 
 textarea {
   padding: 2%;
-  outline: none;
 }
 
 .allAnswer {
   display: flex;
   width: 500px;
   height: 50px;
-  margin: 2% 2% 2% 2%;
+  margin: 2% 2% 2% 0%;
 }
 
 #extra3 {
@@ -60,7 +83,6 @@ textarea {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   padding: 1.5%;
-  // clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
 
 
@@ -70,7 +92,7 @@ textarea {
   border-radius: 5px;
   width: 500px;
   height: 50px;
-  margin: 2% 2% 2% 2%;
+  margin: 2% 2% 2% 0%;
 }
 
 .answer {
@@ -81,7 +103,6 @@ textarea {
   width: 80%;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
-  // clip-path: polygon(5% 0%, 1000% 0%, 75% 100%, 0% 100%);
   padding-left: 1%;
   transition: border 0.5s ease-in-out 0s, box-shadow 0.3s ease-in-out 0s;
 }
@@ -119,7 +140,7 @@ textarea {
   border: 0px;
   border-radius: 5px;
   color: #EEEEEE;
-  width: 50%;
+  width: 49%;
   height: 50px;
   margin-top: 10px;
   font-size: 19px;
@@ -130,6 +151,15 @@ hr {
   margin-left: -1%;
   color: #3E3E3E;
 }
+
+#titleLine {
+  width: 50%;
+  height: 3px;
+  background-color: #118AB2;
+  margin-left: 26%;
+  margin-right: 26%;
+}
+
 .AddQuestion {
   background-color: #FFD116;
   border: 0px;
