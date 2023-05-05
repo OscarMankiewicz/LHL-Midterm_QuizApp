@@ -9,9 +9,24 @@ const express = require('express');
 const app = express();
 // app.set("view engine", "ejs"); //this crashes app
 
+console.log ("user.js is working")
+
 app.get ('/newquiz', (req, res) => {
   res.render('newquiz')
 })
 
-module.exports = app;
 
+
+app.get('/', (req, res) => {
+  pool.query('SELECT NAME FROM quiz', (error, results) => {
+    if (error) {
+      throw error
+    }
+    res.render('quiz', { quiz: results.rows })
+  })
+})
+
+
+
+
+module.exports = app;

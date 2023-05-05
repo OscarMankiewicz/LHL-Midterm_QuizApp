@@ -1,6 +1,6 @@
 // Client facing scripts here
 $(() => {
-  $('#fetch-users').on('click', () => {
+  // $('#fetch-users').on('click', () => {
     $.ajax({
       method: 'GET',
       url: '/api/users'
@@ -12,6 +12,9 @@ $(() => {
         for (const user of response.users) {
           $(`<li class="user">`).text(user.name).appendTo($usersList);
         }
-      });
+      // });
   });
 });
+
+//replace click
+console.log ("user.js")
