@@ -4,12 +4,21 @@ addQuestionButton.addEventListener('click', function(event) {
   event.preventDefault();
 });
 
+/*let mysql = require('mysql');
+
+let con = mysql.createConnection({
+  host: "localhost",
+  user: "yourusername",
+  password: "yourpassword",
+  database: "mydb"
+});*/
+
 let questionCounter = 1;
 
 const newQuestion = (questionNumber) => {
   return `
     <div class="Questiontitlecontainer">
-      <textarea name="text" class="questionTitle" placeholder="What's your question?"></textarea>
+      <textarea id="question-content" name="text" class="questionTitle" placeholder="What's your question?"></textarea>
     </div>
     <div id="answer-container" class ="AnswersContainer">
       <div class = "ManditoryAnswers">
@@ -44,6 +53,31 @@ const newQuestion = (questionNumber) => {
 const Quizform = document.getElementById("quizForm");
 $(document).ready(function() {
   $(".AddQuestion").on("click", function() {
+
+    // Submit question:
+    //con.connect(function(err) {
+    //   if (err) throw err;
+    //   console.log("Connected!");
+    //   let sqlTopic = `INSERT INTO questions (question) VALUES ($("#title-maker").val())`;
+    //   let sqlQuestion = `INSERT INTO questions (question) VALUES ($1)`;
+    //   let sqlAnswer = `INSERT INTO answers (question) VALUES ($("#Answer"+questionCounter+"-1").val())`;
+    //   con.query(sql, function (err, result) {
+    //     if (err) throw err;
+    //     console.log("1 record inserted");
+    //   });
+    // });
+    console.log($("#title-maker").val());
+    console.log($("#question-content").val());
+    console.log($("#Answer"+questionCounter+"-1").val());
+    console.log($("#Answer"+questionCounter+"-2").val());
+    console.log($("#Answer"+questionCounter+"-3").val());
+    console.log($("#Answer"+questionCounter+"-4").val());
+    console.log(document.getElementById("checkA").checked);
+    console.log(document.getElementById("checkB").checked);
+    console.log(document.getElementById("checkC").checked);
+    console.log(document.getElementById("checkD").checked);
+
+
     questionCounter++;
     if (questionCounter < 6) {
       if (questionCounter === 2) {
