@@ -181,3 +181,47 @@ hr {
   font-size: 19px;
   margin-left: -58%;
 }
+
+
+#circle1 {
+  position: absolute;
+  height: 250px;
+  width: 250px;
+  background-color: transparent;
+  border: 10px solid #118AB2;
+  border-radius: 50%;
+  display: inline-block;
+  z-index: 1;
+  font-size: 50px;
+  color: #118AB2;
+  padding-top: 6.3%;
+  clip-path: polygon(0% 0%, 95% , 75% 100%, 0% 100%);
+}
+
+#circle2 {
+  height: 250px;
+  width: 250px;
+  background-color: #EEEEEE;
+  border: 10px solid #FA8334;
+  border-radius: 50%;
+  display: inline-block;
+  padding-top: 6.3%;
+}
+
+#done {
+  background-color: #118AB2;
+  border: 0px;
+  border-radius: 5px;
+  color: #EEEEEE;
+  width: 80%;
+  height: 50px;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  font-size: 19px;
+  margin-left: 0%;
+}
+
+// #cut-circ {
+//   stroke-dasharray: 110;
+//   stroke-dashoffset: 0;
+// }

@@ -54,6 +54,11 @@ app.get('/newquiz', (req, res) => { //relocate later
   res.render('newquiz')
 })
 
+app.get('/results', (req, res) => { //relocate later
+  res.render('results')
+})
+
+
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
 });
