@@ -1,6 +1,6 @@
 
 --test code
--- Insert question1 and answers // might need a quizurl randomizer later
+-- Insert question1 and answers //
 
 INSERT INTO users (id, name, password)
 VALUES (01,'admin', 'password');
