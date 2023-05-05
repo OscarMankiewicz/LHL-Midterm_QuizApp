@@ -7,4 +7,7 @@ const getUsers = () => {
     });
 };
 
+
+//store functions here
+
 module.exports = { getUsers };
