@@ -28,7 +28,7 @@ Used to reset whole table and serial ids
 -- CREATE TABLE quiz (
 --   id SERIAL PRIMARY KEY NOT NULL,
 --   user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
---   quiz_url VARCHAR(255);
+--   quiz_url VARCHAR(255),
 --   name VARCHAR(255) NOT NULL,
 --   title VARCHAR(255) NOT NULL,
 --   question1 VARCHAR(255) NOT NULL,
