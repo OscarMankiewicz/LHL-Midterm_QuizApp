@@ -5,14 +5,6 @@ $(document).ready(function() {
         "id": "quiz1",
         "title": "Name of the Quiz"
       },
-      {
-        "id": "quiz2",
-        "title": "Name of the Quiz 2"
-      },
-      {
-        "id": "quiz3",
-        "title": "Name of the Quiz 3"
-      }
     ]
   };
 
@@ -38,7 +30,10 @@ $(document).ready(function() {
         method: 'GET',
         dataType: 'json',
         success: function(response) {
+          const quizUrl = response[0].quizurl
+          const quizId = response[0].id
           console.log(response);
+          window.location.href = `/quiz/${quizUrl}`;
         },
         error: function(jqXHR, textStatus, errorThrown) {
           console.log(textStatus, errorThrown);
