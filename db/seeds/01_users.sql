@@ -8,9 +8,6 @@ VALUES (01,'admin', 'password');
 INSERT INTO quiz (user_id, id, name, title, question1, question2)
 VALUES (01, 01, 'Anime', 'Anime', 'Most Highly Rated Anime', 'Most popular anime of 2021');
 
-INSERT INTO quiz (user_id, id, name, title, question1, question2)
-VALUES (01, 10, 'Anime', 'Anime', 'Most Highly Rated Anime', 'Most popular anime of 2021') returning *;
-
 INSERT INTO questions (quiz_id, id, question)
 VALUES (01,01,'Most Highly Rated Anime');
 
@@ -70,5 +67,4 @@ VALUES (3,'Demonslayer', 'Jujutsu Kaisen', 'One Piece', 'Naruto', 'Demonslayer')
 SELECT id FROM answers WHERE answer1 = 'Demonslayer' AND answer2 = 'Jujutsu Kaisen' AND answer3 = 'One Piece' AND answer4 = 'Naruto';
 
 -- Insert results for question2
-INSERT INTO results (userId, questionId, content, answersId)
-VALUES (01, 4, 'Most popular anime of 2021', 4);
+Se
