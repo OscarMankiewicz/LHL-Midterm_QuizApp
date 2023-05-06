@@ -90,15 +90,15 @@ app.get('/results', (req, res) => { //relocate later
 })
 
 
-app.get('/quiz/:quizUrl', (req, res) => {
-  const quizUrl = req.params.quizUrl;
-  res.render('quiz', { quizUrl });
-});
+// app.get('/quiz/:quizUrl', (req, res) => {
+//   const quizUrl = req.params.quizUrl;
+//   res.render('quiz', { quizUrl });
+// });
 
-app.get('/quiz/:quizUrl/', (req, res) => {
-  const quizUrl = req.params.quizUrl;
-  res.render('quiz', { quizUrl });
-});
+// app.get('/quiz/:quizUrl/', (req, res) => {
+//   const quizUrl = req.params.quizUrl;
+//   res.render('quiz', { quizUrl });
+// });
 
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
