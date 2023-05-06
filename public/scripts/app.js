@@ -1,13 +1,20 @@
 // Client facing scripts here
-
-//for use later in making the quizurl
-function generateUrl() {
-  const alphabet = '0123456789abcdefghijklmnopqrstuvwxyz';
-  let quizUrl = '';
-  for (let i = 0; i < 7; i++) {
-    const randomUnit = Math.floor(Math.random() * alphabet.length);
-    code += alphabet[randomUnit];
-  }
-  return quizUrl;
-}
+$(document).ready(function() {
+  $("#quizForm").on("submit", function(event) {
+    event.preventDefault();
+    console.log("submitting");
+    $.ajax({
+      type: 'POST',
+      url: '/quiz',
+      data: { quizNumber: 1 },
+      success: function(data) {
+        console.log('Stored quiz number:', data.quizNumber);
+      },
+      error: function(jqXHR, textStatus, errorThrown) {
+        console.error('Failed to store quiz number:', errorThrown);
+      }
+    });
+    return false;
+  });
+});
 
