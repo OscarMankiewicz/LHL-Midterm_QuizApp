@@ -5,7 +5,7 @@ $(document).ready(function() {
     console.log("submitting");
     $.ajax({
       type: 'POST',
-      url: 'http://localhost:8080/quiz',
+      url: '/quiz',
       data: { quizNumber: 1 },
       success: function(data) {
         console.log('Stored quiz number:', data.quizNumber);
@@ -14,6 +14,7 @@ $(document).ready(function() {
         console.error('Failed to store quiz number:', errorThrown);
       }
     });
+    return false;
   });
 });
 
