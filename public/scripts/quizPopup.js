@@ -30,7 +30,7 @@ $(document).ready(function() {
         method: 'GET',
         dataType: 'json',
         success: function(response) {
-          const quizUrl = response[0].quizurl
+          const quizUrl = response[0].quizURL
           const quizId = response[0].id
           console.log(response);
           window.location.href = `/quiz/${quizUrl}`;
