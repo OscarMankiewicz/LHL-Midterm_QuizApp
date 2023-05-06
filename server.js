@@ -1,6 +1,11 @@
 // load .env data into process.env
 require('dotenv').config();
 
+// const addQuiz = require('./LHL-Midterm_QuizApp');
+// const addQuestion = require('./LHL-Midterm_QuizApp');
+// const addAnswer = require('./LHL-Midterm_QuizApp');
+const { addQuiz } =require('./db/queries/quizzes');
+
 // Web server config
 const sassMiddleware = require('./lib/sass-middleware');
 const express = require('express');
@@ -52,7 +57,30 @@ app.use ('/quiz', questionRoute);
 app.get('/', (req, res) => {
   res.render('index');
 });
+// app.get('/quiz',(req,res)=>{
+//   const result= req.body;
+//   console.log("reqqq",result)
+// })
+app.post('/quiz', (req, res) => {
+// const name =req.body.answerIn;
+const title = req.body.title;
+const topic = req.body.topic;
+const question1 = req.body.question1;
+const question2 = req.body.question2;
 
+  console.log("topic",topic)
+  addQuiz(user,topic,title,question1,question2).then(() =>{
+    // res.redirect();
+  });
+  addQuestion(questionContent).then(() =>{
+    res.redirect();
+  });
+
+  addAnswer(answerIn).then(() =>{
+    res.redirect();
+  });
+
+});
 app.get('/newquiz', (req, res) => { //relocate later
   res.render('newquiz')
 })
@@ -61,7 +89,13 @@ app.get('/results', (req, res) => { //relocate later
   res.render('results')
 })
 
+
 app.get('/quiz/:quizUrl', (req, res) => {
+  const quizUrl = req.params.quizUrl;
+  res.render('quiz', { quizUrl });
+});
+
+app.get('/quiz/:quizUrl/', (req, res) => {
   const quizUrl = req.params.quizUrl;
   res.render('quiz', { quizUrl });
 });
@@ -71,3 +105,11 @@ app.listen(PORT, () => {
 });
 
 
+
+
+
+// app.get('/results', (req, res) => {
+//   getResults().then(results => {
+//     res.render('results', { results });
+//   });
+// });
