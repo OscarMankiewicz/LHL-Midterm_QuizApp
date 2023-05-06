@@ -12,8 +12,33 @@
   <link rel="stylesheet" href="/vendor/border-box.css" />
   <link rel="stylesheet" href="/styles/main.css" />
   <link rel="stylesheet" href="/styles/layout.css" />
+  <link rel="stylesheet" href="/styles/index.css" />
 
   <script src="/vendor/jquery-3.0.0.js"></script>
+  <!-- <script src="/routes/users.js"></script> -->
+  <script src="/scripts/quizPopup.js"></script>
+  <script defer src="/scripts/app.js"></script>
+  <script defer src="/scripts/newQuiz.js"></script>
+
+ <script>
+  function functionA() {
+      document.getElementById("Answer1-1").style.backgroundColor = "#FA8334";
+      document.getElementById("Answer1-1").style.borderColor = "#FA8334";
+  };
+  function functionB() {
+    document.getElementById("Answer1-2").style.backgroundColor = "#118AB2";
+    document.getElementById("Answer1-2").style.borderColor = "#118AB2";
+  };
+  function functionC() {
+    document.getElementById("Answer1-3").style.backgroundColor = "#FA8334";
+    document.getElementById("Answer1-3").style.borderColor= "#FA8334";
+  };
+  function functionD() {
+    document.getElementById("Answer1-4").style.backgroundColor= "#FA8334";
+    document.getElementById("Answer1-4").style.borderColor = "#FA8334";
+  };
+  </script>
+  <%- include('./partials/header') %>
 
   <script type="application/javascript" defer src="/scripts/testdb.js"></script>
 </head>
@@ -21,48 +46,63 @@
 <body>
   <%- include('./partials/header') %>
   <main class ="container">
-    <!-- <section class="searchBar">
-      <form method="get" action="/search" id="quizSearch">
-        <label for="search-text" id="searchButton">Search</label>
-        <textarea name="text" id="search-text" placeholder="What quiz are you looking for?"></textarea>
-        <div class="lowerHalf">
-          <button type="submit" class="searchButton">Search</button>
+    <h1> Take Quiz </h1>
+
+    <hr class="titleLine">
+
+    <div id="question-container"></div>
+
+    <section class="title-maker-container">
+      <form id="QuizLayout" method="post" action="/quiz" class="title-maker">
+        <div class = title>
+
+
+          <div name="topic" id="title-topic"> Geography </div>
+        </div>
+
+        <div id =Question1>
+          <div id="question-box" class="QuestionBox">
+            <div class="Questiontitlecontainer">
+              <div id="question-content" name="text" class="questionTitle"> Where is the Trevi Fountain located ? </div>
+            </div>
+            <div id="answer-container" class ="AnswersContainer">
+              <div class = "ManditoryAnswers">
+                <div class="allAnswer">
+                  <div id="answerTagA" class="answerTag"> A </div>
+                  <div name="text" id="Answer1-1" class="answer" onclick="functionA()"> France </div>
+                </div>
+                <div class="allAnswer">
+                  <div id="answerTagB" class="answerTag"> B </div>
+                  <div name="text" id="Answer1-2" class="answer"  onclick="functionB()"> Italy </div>
+                </div>
+                <div id="extra3" class="allAnswer">
+                  <div id="answerTagC" class="answerTag"> C </div>
+                  <div name="text" id="Answer1-3" class="answer"  onclick="functionC()"> Spain </div>
+                </div>
+                <div id="extra4" class="allAnswer extra">
+                  <div id="answerTagD" class="answerTag"> D </div>
+                  <div name="text" id="Answer1-4" class="answer" onclick="functionD()"> England </div>
+                </div>
+              </div>
+              <div class="ExtraAnswers">
+                <button class="AddAnswer"> Next Question > </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr>
+
+        <div id =Question2>
+
+        </div>
+        \
+        <div class="Createbutton">
+          <button id="submit" class="Createbutton"> Submit </button>
         </div>
       </form>
-    </section> -->
-
-
-
-
-
-
-    <section class = "quizContainer">
-      <section class = "quiz">
-        <h1>Title</h1>
-        <h2>10 questions</h2>
-        <h3>Author</h3>
-      </section>
-
-      <section class = "quiz">
-        <h1>Title</h1>
-        <h2>10 questions</h2>
-        <h3>Author</h3>
-      </section>
-
-      <section class = "quiz">
-        <h1>Title</h1>
-        <h2>10 questions</h2>
-        <h3>Author</h3>
-      </section>
-
-
-
-
-
-    </section>
-  <h1>Have fun! 🥔</h1>
-</main>
-</main>
+  </section>
+  </main>
 </body>
 
 </html>

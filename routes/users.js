@@ -16,7 +16,6 @@ app.get ('/newquiz', (req, res) => {
 })
 
 
-
 app.get('/', (req, res) => {
   pool.query('SELECT NAME FROM quiz', (error, results) => {
     if (error) {
