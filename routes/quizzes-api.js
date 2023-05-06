@@ -13,6 +13,10 @@ router.get('/', (req, res) => {
         .json({ error: err.message });
     });
 });
+router.post('/quiz',(req,res)=>{
+  const result = req.body;
+  console.log("result",result)
+})
 
 //for post gres
 // quizzesQueries.addQuiz(params).then( =>question loop  questionsQueries.addQuestion(questionParams).then( =>...

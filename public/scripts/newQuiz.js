@@ -8,8 +8,6 @@ $(document).ready(function() {
   });
 });
 
-
-
 console.log("If quiz topic works");
 
 

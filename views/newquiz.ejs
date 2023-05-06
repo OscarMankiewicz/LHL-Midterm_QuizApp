@@ -36,7 +36,7 @@
         <form id="QuizForm" method="post" action="/quiz" class="title-maker">
           <div class = title>
 
-            <textarea name="text" id="title-maker" placeholder="What's the topic?"></textarea>
+            <textarea name="topic" id="title-maker" placeholder="What's the topic?"></textarea>
           </div>
 
           <div id =Question1>
@@ -45,28 +45,28 @@
 
             <div id="question-box" class="QuestionBox">
               <div class="Questiontitlecontainer">
-                <textarea id="question-content" name="text" class="questionTitle" placeholder="What's your question?"></textarea>
+                <textarea id="question-content" name="questionContent" class="questionTitle" placeholder="What's your question?"></textarea>
               </div>
               <div id="answer-container" class ="AnswersContainer">
                 <div class = "ManditoryAnswers">
                   <div class="allAnswer">
                     <div id="answerTagA" class="answerTag"> A </div>
-                    <input name="text" id="Answer1-1" class="answer" placeholder="Answer 1">
+                    <input name="answerIn" id="Answer1-1" class="answer" placeholder="Answer 1">
                     <input type="checkbox" id="checkA" class="check">
                   </div>
                   <div class="allAnswer">
                     <div id="answerTagB" class="answerTag"> B </div>
-                    <input name="text" id="Answer1-2" class="answer" placeholder="Answer 2">
+                    <input name="answerIn" id="Answer1-2" class="answer" placeholder="Answer 2">
                     <input type="checkbox" id="checkB" class="check">
                   </div>
                   <div id="extra3" class="allAnswer">
                     <div id="answerTagC" class="answerTag"> C </div>
-                    <input name="text" id="Answer1-3" class="answer" placeholder="Answer 3" >
+                    <input name="answerIn" id="Answer1-3" class="answer" placeholder="Answer 3" >
                     <input type="checkbox" id="checkC" class="check">
                   </div>
                   <div id="extra4" class="allAnswer extra">
                     <div id="answerTagD" class="answerTag"> D </div>
-                    <input name="text" id="Answer1-4" class="answer" placeholder="Answer 4">
+                    <input name="answerIn" id="Answer1-4" class="answer" placeholder="Answer 4">
                     <input type="checkbox" id="checkD" class="check">
                   </div>
                 </div>
@@ -90,7 +90,7 @@
           <hr>
 
           <div class="Createbutton">
-            <button id="submit" class="Createbutton">Create New Question</button>
+            <button id="submit" class="Createbutton">Submit This Quiz</button>
           </div>
         </form>
     </section>

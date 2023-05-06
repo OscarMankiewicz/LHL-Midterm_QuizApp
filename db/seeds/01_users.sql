@@ -8,6 +8,9 @@ VALUES (01,'admin', 'password');
 INSERT INTO quiz (user_id, id, name, title, question1, question2)
 VALUES (01, 01, 'Anime', 'Anime', 'Most Highly Rated Anime', 'Most popular anime of 2021');
 
+INSERT INTO quiz (user_id, id, name, title, question1, question2)
+VALUES (01, 10, 'Anime', 'Anime', 'Most Highly Rated Anime', 'Most popular anime of 2021') returning *;
+
 INSERT INTO questions (quiz_id, id, question)
 VALUES (01,01,'Most Highly Rated Anime');
 
