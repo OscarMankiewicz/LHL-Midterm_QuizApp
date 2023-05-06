@@ -14,19 +14,38 @@ const pool = mysql.createPool({
 });
 
 app.post('/quiz', (req, res) => {
-  // Call the createQuizURL function to generate a random URL
-  const quizUrl = req.body.quizURL;
-  // Insert the URL into the database
-  pool.query('INSERT INTO quiz (quizURL) VALUES (?)', [quizUrl], (error, results) => {
+  // Get the count of rows in the quiz table
+  pool.query('SELECT COUNT(*) as count FROM quiz', (error, results) => {
     if (error) {
-      // Handle the error if the insert operation fails
       console.error(error);
-      res.status(500).json({ error: 'Failed to save URL' });
+      res.status(500).json({ error: 'Failed to get quiz count' });
     } else {
-        res.json({ quizUrl: quizUrl });
-      }
+      const quizNumber = results[0].count + 1;
+      // Insert the quiz number into the database
+      pool.query('INSERT INTO quiz (quizURL) VALUES (?)', [quizNumber], (error, results) => {
+        if (error) {
+          console.error(error);
+          res.status(500).json({ error: 'Failed to save quiz number' });
+        } else {
+          res.json({ quizNumber: quizNumber });
+        }
+      });
+    }
   });
 });
+
+app.get('/quiz', (req, res) => {
+  // Select all the rows from the quiz table
+  pool.query('SELECT * FROM quiz', (error, results) => {
+    if (error) {
+      console.error(error);
+      res.status(500).json({ error: 'Failed to get quiz data' });
+    } else {
+      res.json(results);
+    }
+  });
+});
+
 
 console.log("If quiz topic works");
 
