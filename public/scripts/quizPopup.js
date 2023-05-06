@@ -21,30 +21,47 @@ $(document).ready(function() {
   const createQuizElement = function(quiz) {
     const $quiz = $('<div>').addClass('quiz');
     const $content = $('<div>').addClass('content').text(quiz.title);
+    // console.log (quiz, "food")
 
     $quiz.append($content);
 
     $quiz.on('click', function() {
-      $.ajax({
-        url: `/api/quizzes`,
-        method: 'GET',
-        dataType: 'json',
-        success: function(response) {
-          const quizUrl = response[0].quizURL
-          const quizId = response[0].id
-          console.log(response);
-          window.location.href = `/quiz/${quizUrl}`;
-        },
-        error: function(jqXHR, textStatus, errorThrown) {
-          console.log(textStatus, errorThrown);
-        }
-      });
+             window.location.href = '/quiz/' + quiz.id;
+      // $.ajax({
+      //   url: `/api/quizzes`,
+      //   method: 'GET',
+      //   dataType: 'json',
+      //   success: function(response) {
+
+      //     const quizData = response;
+      //     const quizUrl = quizData.quizurl
+      //     const quizId = quizData.id
+      //     const question1 = quizData.question1;
+      //     console.log (response)
+
+      //     console.log('quizData:', quizData);
+
+      //     const questionTitle = document.querySelector('.questionTitle');
+      //     console.log(questionTitle) //returns null
+
+
+
+
+
+      //     console.log(response);
+      //     // window.location.href = '/quiz/' + quizId;
+      //   },
+      //   error: function(jqXHR, textStatus, errorThrown) {
+      //     console.log(textStatus, errorThrown);
+      //   }
+      // });
+
     });
 
     return $quiz;
   };
 
-  renderQuiz(quizPopup.quizzes);
+  // renderQuiz(quizPopup.quizzes);
 
   console.log('quizpopup is working');
 

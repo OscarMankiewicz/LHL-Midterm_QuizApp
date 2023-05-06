@@ -54,18 +54,22 @@ const Quizform = document.getElementById("quizForm");
 $(document).ready(function() {
   $(".AddQuestion").on("click", function() {
 
-    // Submit question:
-    //con.connect(function(err) {
-    //   if (err) throw err;
-    //   console.log("Connected!");
-    //   let sqlTopic = `INSERT INTO questions (question) VALUES ($("#title-maker").val())`;
-    //   let sqlQuestion = `INSERT INTO questions (question) VALUES ($1)`;
-    //   let sqlAnswer = `INSERT INTO answers (question) VALUES ($("#Answer"+questionCounter+"-1").val())`;
-    //   con.query(sql, function (err, result) {
-    //     if (err) throw err;
-    //     console.log("1 record inserted");
-    //   });
-    // });
+    let quizknowsForm = document.getElementById("QuizForm");
+
+    // Add an event listener to the form's submit button
+    quizknowsForm.addEventListener("submit", function(event) {
+  // Prevent the default form submission behavior
+  event.preventDefault();
+
+  // Get the form data as a FormData object
+  let formData = new FormData(form);
+
+  // Submit the form data using an AJAX request
+  let xhr = new XMLHttpRequest();
+  xhr.open("POST", "/submit");
+  xhr.send(formData);
+});
+
     console.log($("#title-maker").val());
     console.log($("#question-content").val());
     console.log($("#Answer"+questionCounter+"-1").val());
