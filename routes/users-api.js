@@ -21,4 +21,18 @@ router.get('/', (req, res) => {
     });
 });
 
+
+
+
+
 module.exports = router;
+
+
+//- on click of quiz load individual quiz (get /quiz/:id)
+// - add new quiz to db
+// - attempt a quiz
+// - maybe make a quiz private?
+
+
+// conditionally create new quiz if cookie does not exist, add question, loop through answers and add each answer referencing question id
+// otherwise (else) add question to quiz referencing quiz_id from cookie, loop through answers add each answer

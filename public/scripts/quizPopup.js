@@ -1,61 +1,64 @@
-
-
 $(document).ready(function() {
-
-
-
-const quizPopup = {
-  "quizzes": [
-    {
-      "content": {
-        "text": "Name of the Quiz"
+  const quizPopup = {
+    "quizzes": [
+      {
+        "id": "quiz1",
+        "title": "Name of the Quiz"
+      },
+      {
+        "id": "quiz2",
+        "title": "Name of the Quiz 2"
+      },
+      {
+        "id": "quiz3",
+        "title": "Name of the Quiz 3"
       }
-    },
-    {
-      "content": {
-        "text": "Name of the Quiz 2"
-      }
-    },
-    {
-      "content": {
-        "text": "Name of the Quiz 3"
-      }
+    ]
+  };
+
+  const renderQuiz = function(quizzes) {
+    const $questionContainer = $('#question-container');
+    $questionContainer.empty();
+
+    for (const quiz of quizzes) {
+      const $quizElement = createQuizElement(quiz);
+      $questionContainer.append($quizElement);
     }
-  ]
-};
+  };
 
-const renderQuiz = function(quizzes) {
-  const $questionContainer= $('#question-container');
-  $questionContainer.empty();
+  const createQuizElement = function(quiz) {
+    const $quiz = $('<div>').addClass('quiz');
+    const $content = $('<div>').addClass('content').text(quiz.title);
 
-  for (const quiz of quizzes) {
-    const $quizElement = createQuizElement(quiz);
-    $questionContainer.append($quizElement);
-  }
-}
+    $quiz.append($content);
 
-const createQuizElement = function(quiz) {
-  const $quiz = $('<div>').addClass('quiz');
-  const $content = $('<div>').addClass('content').text(quiz.title);
+    $quiz.on('click', function() {
+      $.ajax({
+        url: `/api/quizzes`,
+        method: 'GET',
+        dataType: 'json',
+        success: function(response) {
+          console.log(response);
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+          console.log(textStatus, errorThrown);
+        }
+      });
+    });
 
-  $quiz.append($content);
-  return $quiz;
-}
+    return $quiz;
+  };
 
-renderQuiz(quizPopup.quizzes);
+  renderQuiz(quizPopup.quizzes);
 
-console.log ('quizpopup is working')
+  console.log('quizpopup is working');
 
-$.ajax({
-  url:'/api/quizzes',
-  method: 'GET',
-  dataType: 'json',
-  success:function(response) {
-    renderQuiz(response);
-  }
+  $.ajax({
+    url: '/api/quizzes',
+    method: 'GET',
+    dataType: 'json',
+    success: function(response) {
+      renderQuiz(response);
+    }
+  });
 });
-
-
-
-})
-
