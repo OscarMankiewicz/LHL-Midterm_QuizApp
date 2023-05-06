@@ -37,7 +37,7 @@ const addAnswer = (quiz_id, answer1, answer2, answer3, answer4) => {
 //
 
 
-module.exports = { getQuizzes };
+module.exports = { getQuizzes, addQuiz, addQuestion, addAnswer };
 // module.exports = { addQuiz };
 // module.exports = { addQuestion };
 // module.exports = { addAnswer };
